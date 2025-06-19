@@ -104,5 +104,29 @@ This project comes with a ready-to-use Postman collection file: `SolarCapital.po
 5. Modify the payload or user ID as needed and test away 🚀
 
 ---
+📂 Project Structure & File Overview
 
-##
+| File / Folder                          | Purpose                                                             |
+| -------------------------------------- | ------------------------------------------------------------------- |
+| `rewards/models.py`                    | Contains Django models: `User`, `Project`, `Subscription`           |
+| `rewards/serializers.py`               | Serializers for converting model data to/from JSON                  |
+| `rewards/views.py`                     | Function-based API views for distributing rewards & fetching wallet |
+| `rewards/urls.py`                      | URL routing for app-level endpoints                                 |
+| `solar_rewards/urls.py`                | Includes app URLs at the project level                              |
+| `SolarCapital.postman_collection.json` | Postman collection to test the API                                  |
+
+📸 Postman Screenshots (API in Action)
+To prove that the endpoints are working correctly, here are sample responses from Postman:
+
+1. Postmen Collection
+   ![Screenshot Post MEN Collection](https://github.com/user-attachments/assets/5e090394-d3dd-449a-9179-d6667c470835)
+
+3. Distribute Rewards (POST)
+   ![Screenshot rewards/distribute](https://github.com/user-attachments/assets/f436b2cb-cb15-42f1-ab99-c02319b52f0e)
+
+4. Get Wallet Balance (GET)
+   ![Screenshot user/1/wallet](https://github.com/user-attachments/assets/c392a7f1-e011-48c5-ae2c-fdb1175c5348)
+
+
+
+
