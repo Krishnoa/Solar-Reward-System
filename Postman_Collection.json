@@ -1,0 +1,46 @@
+{
+  "info": {
+    "name": "Solar Capital Reward Wallet API",
+    "description": "Postman collection for testing the in-memory reward distribution system.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Distribute Rewards",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"projectId\": 1,\n  \"kWh_generated\": 300\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/rewards/distribute",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "8000",
+          "path": ["rewards", "distribute"]
+        }
+      }
+    },
+    {
+      "name": "Get Wallet Balance",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/user/1/wallet",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "8000",
+          "path": ["user", "1", "wallet"]
+        }
+      }
+    }
+  ]
+}
